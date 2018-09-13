@@ -54,33 +54,6 @@ public class BrandServiceImpl implements BrandService {
      * @return
      */
     @Override
-    public PageResult findLike(TbBrand tbBrand, int page, int size) {
-        PageHelper.startPage(page,size);
-        TbBrandExample example=new TbBrandExample();
-        TbBrandExample.Criteria criteria = example.createCriteria();
-
-        if (tbBrand != null) {
-            if (tbBrand.getName()!=null&&tbBrand.getName().length()>0) {
-                criteria.andNameLike("%"+tbBrand.getName()+"%");
-            }
-            if (tbBrand.getFirstChar()!=null&&tbBrand.getFirstChar().length()>0){
-                criteria.andFirstCharEqualTo(tbBrand.getFirstChar());
-            }
-        }
-
-        Page<TbBrand> tbBrands = (Page<TbBrand>) brandMapper.selectByExample(example);
-
-        return new PageResult(tbBrands.getTotal(),tbBrands.getResult());
-    }
-
-    /**
-     * 品牌条件分页查询  重载存在IOException
-     * @param tbBrand
-     * @param page
-     * @param size
-     * @return
-     */
-    /*@Override
     public PageResult findByPage(TbBrand tbBrand, int page, int size) {
         PageHelper.startPage(page,size);
         TbBrandExample example=new TbBrandExample();
@@ -98,7 +71,7 @@ public class BrandServiceImpl implements BrandService {
         Page<TbBrand> tbBrands = (Page<TbBrand>) brandMapper.selectByExample(example);
 
         return new PageResult(tbBrands.getTotal(),tbBrands.getResult());
-    }*/
+    }
 
     /**
      * 添加品牌

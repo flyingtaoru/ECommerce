@@ -49,7 +49,7 @@ public class BrandController {
      */
     @RequestMapping("/search")
     public PageResult search(@RequestBody TbBrand tbBrand,int page,int size) {
-        return brandService.findLike(tbBrand,page,size);
+        return brandService.findByPage(tbBrand,page,size);
     }
 
     /**

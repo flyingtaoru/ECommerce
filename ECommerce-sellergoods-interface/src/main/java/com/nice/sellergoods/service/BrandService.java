@@ -16,9 +16,7 @@ public interface BrandService {
 
     PageResult findByPage(int page, int size);
 
-    /*PageResult findByPage(TbBrand tbBrand, int page, int size);*/
-
-    PageResult findLike(TbBrand tbBrand,int page,int size);
+    PageResult findByPage(TbBrand tbBrand,int page,int size);
 
     void save(TbBrand tbBrand);
 
