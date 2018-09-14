@@ -118,5 +118,10 @@ public class BrandController {
         return flag;
     }
 
+    @RequestMapping("/selectOptionList")
+    public List<Map> selectOptionList() {
+        return brandService.selectOptionList();
+    }
+
 }
 

@@ -4,6 +4,7 @@ import com.nice.pojo.TbBrand;
 import entity.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 品牌接口
@@ -26,5 +27,6 @@ public interface BrandService {
 
     void delete(long[] ids);
 
+    List<Map> selectOptionList();
 
 }
