@@ -285,6 +285,7 @@
         <module>ECommerce-sellergoods-service</module>
         <module>ECommerce-pojo</module>
         <module>ECommerce-manager-web</module>
+        <module>ECommerce-shop-web</module>
     </modules>
 
 
